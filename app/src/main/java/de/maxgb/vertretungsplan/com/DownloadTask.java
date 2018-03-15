@@ -142,8 +142,8 @@ public class DownloadTask extends AsyncTask<Void, Void, Integer> {
 		CookieManager cookieManager = new CookieManager();
 		cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
 		httpsclient.setCookieHandler(cookieManager);
-		SSLContext sslContext=sslContextForTrustedCertificates(trustedCertificatesInputStream());
-		httpsclient.setSslSocketFactory(sslContext.getSocketFactory());
+		//SSLContext sslContext=sslContextForTrustedCertificates(trustedCertificatesInputStream());
+		//httpsclient.setSslSocketFactory(sslContext.getSocketFactory());
 
 		try {
 			String cookie = getLoginCookie(httpsclient);
